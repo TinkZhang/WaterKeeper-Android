@@ -6,7 +6,7 @@ import java.time.OffsetDateTime
 
 @Entity
 data class Record (
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val time: OffsetDateTime? = null,
     val amount: Int
 )

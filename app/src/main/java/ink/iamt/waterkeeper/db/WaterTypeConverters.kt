@@ -1,4 +1,4 @@
-package ink.iamt.waterkeeper
+package ink.iamt.waterkeeper.db
 
 import androidx.room.TypeConverter
 import java.time.OffsetDateTime

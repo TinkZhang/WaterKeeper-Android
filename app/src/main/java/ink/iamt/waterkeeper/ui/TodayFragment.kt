@@ -1,11 +1,15 @@
-package ink.iamt.waterkeeper
+package ink.iamt.waterkeeper.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import ink.iamt.waterkeeper.R
+import ink.iamt.waterkeeper.Record
+import ink.iamt.waterkeeper.TodayViewModel
 import kotlinx.android.synthetic.main.fragment_today.*
+import java.time.OffsetDateTime
 
 class TodayFragment : Fragment(R.layout.fragment_today) {
     val model: TodayViewModel by viewModels()
@@ -22,6 +26,7 @@ class TodayFragment : Fragment(R.layout.fragment_today) {
     private fun configAddButtons() {
         btnAddSmall.setOnClickListener {
             model.todayAmount.value = model.todayAmount.value?.plus(100)
+            model.insert(Record(time = OffsetDateTime.now(), amount = 123))
         }
     }
 
