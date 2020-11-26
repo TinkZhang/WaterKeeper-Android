@@ -7,18 +7,18 @@
 
     <fragment
         android:id="@+id/todayFragment"
-        android:name="ink.iamt.waterkeeper.TodayFragment"
+        android:name="ink.iamt.waterkeeper.ui.TodayFragment"
         android:label="Home"
         tools:layout="@layout/fragment_today" />
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="ink.iamt.waterkeeper.HistoryFragment"
+        android:name="ink.iamt.waterkeeper.ui.HistoryFragment"
         android:label="History"
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="ink.iamt.waterkeeper.ProfileFragment"
+        android:name="ink.iamt.waterkeeper.ui.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
