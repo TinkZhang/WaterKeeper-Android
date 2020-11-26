@@ -22,12 +22,15 @@ class TodayFragment : Fragment(R.layout.fragment_today) {
             tvDayWater.text = it.toString()
         })
 
+        model.records.observe(viewLifecycleOwner, Observer { records ->
+            tvDayWater.text = records.flatMap { listOf(it.amount) }.sum().toString()
+        })
+
         configAddButtons()
     }
 
     private fun configAddButtons() {
         btnAddSmall.setOnClickListener {
-            model.todayAmount.value = model.todayAmount.value?.plus(100)
             model.insert(Record(time = OffsetDateTime.now(), amount = 123))
         }
     }

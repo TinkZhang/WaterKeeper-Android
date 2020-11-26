@@ -12,6 +12,8 @@ class TodayViewModel @ViewModelInject constructor(private val repository: WaterR
         MutableLiveData<Int>(0)
     }
 
+    val records = repository.getTodayRecords()
+
     fun insert(record: Record) = viewModelScope.launch {
         repository.insertRecord(record)
     }
