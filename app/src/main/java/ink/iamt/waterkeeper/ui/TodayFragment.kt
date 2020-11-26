@@ -5,14 +5,16 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import dagger.hilt.android.AndroidEntryPoint
 import ink.iamt.waterkeeper.R
 import ink.iamt.waterkeeper.Record
 import ink.iamt.waterkeeper.TodayViewModel
 import kotlinx.android.synthetic.main.fragment_today.*
 import java.time.OffsetDateTime
 
+@AndroidEntryPoint
 class TodayFragment : Fragment(R.layout.fragment_today) {
-    val model: TodayViewModel by viewModels()
+    private val model: TodayViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
