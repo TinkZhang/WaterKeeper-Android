@@ -8,6 +8,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
         android:text="NO."
         android:gravity="center"/>
 
@@ -15,6 +16,7 @@
         android:layout_width="0dp"
         android:layout_weight="2"
         android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
         android:text="Time"
         android:gravity="center"/>
 
@@ -22,6 +24,7 @@
         android:layout_width="0dp"
         android:layout_weight="2"
         android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
         android:id="@+id/tvHeaderAmount"
         android:text="Amount (mL)"
         android:gravity="center"/>
