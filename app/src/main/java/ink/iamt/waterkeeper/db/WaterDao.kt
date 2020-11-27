@@ -16,7 +16,7 @@ interface WaterDao {
     @Delete
     suspend fun deleteRecord(record: Record)
 
-    @Query("SELECT * FROM Record WHERE time > :todayStart AND time < :todayEnd ORDER BY time DESC")
+    @Query("SELECT * FROM Record WHERE time > :todayStart AND time < :todayEnd ORDER BY time ASC")
     fun getTodayRecords(
             todayStart: OffsetDateTime? = OffsetDateTime.now().withHour(0).withSecond(0),
             todayEnd: OffsetDateTime? = OffsetDateTime.now().withHour(23).withSecond(59)

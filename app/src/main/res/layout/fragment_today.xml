@@ -50,13 +50,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDayWater" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDayLog"
-        android:layout_width="match_parent"
+    <include
+        layout="@layout/item_today_rv_header"
+        android:id="@+id/header"
+        android:layout_marginTop="8dp"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider1" />
+        app:layout_constraintTop_toBottomOf="@id/divider1"/>
+
+    <FrameLayout
+        android:id="@+id/rvDayLogContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddBig"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDayLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
 
     <View
         android:id="@+id/divider2"
@@ -65,7 +84,7 @@
         android:background="@color/divider_color"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvDayLog" />
+        app:layout_constraintTop_toBottomOf="@id/rvDayLogContainer" />
 
 
     <Button
